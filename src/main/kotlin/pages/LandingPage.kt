@@ -7,8 +7,19 @@ import org.openqa.selenium.WebElement
 class LandingPage {
 
     val HOTEL_BUTTON_ELEMENT_ID = "ikfcax3"
+    val TITLE_LANDING_PAGE_TITLE_XPATH = "//a[@href='/host/homes']"
+    val LOCATION_FIELD_ID = "bigsearch-query-location-input"
 
     val hotelsButton: WebElement
         get() = driver.findElement(By.className(HOTEL_BUTTON_ELEMENT_ID))
 
+    val titleLandingPage: WebElement
+        get() = driver.findElement(By.xpath(TITLE_LANDING_PAGE_TITLE_XPATH))
+
+    val locationFieldInput: WebElement
+        get() = driver.findElement(By.id(LOCATION_FIELD_ID))
 }
+
+//        val inputField = driver.findElement(By.id("bigsearch-query-location-input"))
+//        inputField.sendKeys("amsterdam")
+//        inputField.sendKeys(Keys.ENTER)

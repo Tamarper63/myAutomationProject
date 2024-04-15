@@ -22,9 +22,9 @@ class SearchForHotelsTests() {
     fun searchForVacation() {
         driver.get(URL)
         driver.manage().deleteAllCookies()
-        println("Page title is: ${driver.title}")
-        sleep(6000)
+        landingBlock.verifyLandingPage(6000, 5,60000)
         landingBlock.clickOnWhere()
+//        landingBlock.inputTextInLocationField("amsterdam")
         val inputField = driver.findElement(By.id("bigsearch-query-location-input"))
         inputField.sendKeys("amsterdam")
         inputField.sendKeys(Keys.ENTER)
