@@ -24,6 +24,22 @@ class LandingPageBlock {
         clickOnElement(landingPage.dateStart)
     }
 
+    fun clickOnDateEnd() {
+        clickOnElement(landingPage.dateEnd)
+    }
+
+    fun clickOnWho() {
+        clickOnElement(landingPage.whoButton)
+    }
+
+    fun clickOnSearch() {
+        clickOnElement(landingPage.clickOnSearch)
+    }
+
+    fun clickOnAddAdult() {
+        clickOnElement(landingPage.addAdult)
+    }
+
     fun inputTextInLocationField(locationInput: String ) {
         val searchElement = landingPage.locationFieldInput
         searchElement.sendKeys(locationInput)

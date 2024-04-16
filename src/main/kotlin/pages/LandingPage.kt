@@ -22,6 +22,18 @@ class LandingPage {
     val dateStart: WebElement
         get() = driver.findElement(By.cssSelector("[data-testid='calendar-day-04/18/2024']"))
 
+    val dateEnd: WebElement
+        get() = driver.findElement(By.cssSelector("[data-testid='calendar-day-04/22/2024']"))
+
+    val whoButton: WebElement
+        get() = driver.findElement(By.cssSelector("#search-tabpanel > div > div.c111bvlt.atm_9s_1txwivl.atm_1eltean_1osqo2v.c1gh7ier.atm_am_1qhqiko.dir.dir-ltr"))
+
+    val addAdult: WebElement
+        get() = driver.findElement(By.cssSelector("button[data-testid='stepper-adults-increase-button']"))
+
+    val clickOnSearch: WebElement
+        get() = driver.findElement(By.cssSelector("button[data-testid='structured-search-input-search-button']"))
+
 }
 
 
