@@ -20,18 +20,15 @@ class LandingPageBlock {
         clickOnElement(landingPage.hotelsButton)
     }
 
-    fun inputTextInLocationField(input: String) {
-        landingPage.locationFieldInput.sendKeys(input)
-        landingPage.locationFieldInput.sendKeys(Keys.ENTER)
+    fun clickOnDateStart() {
+        clickOnElement(landingPage.dateStart)
     }
 
-
-    //        val inputField = driver.findElement(By.id("bigsearch-query-location-input"))
-//        inputField.sendKeys("amsterdam")
-//        inputField.sendKeys(Keys.ENTER)
-
-
-
+    fun inputTextInLocationField(locationInput: String ) {
+        val searchElement = landingPage.locationFieldInput
+        searchElement.sendKeys(locationInput)
+        searchElement.sendKeys(Keys.ENTER)
+    }
 
     fun verifyLandingPage(
         intervalMillis: Long,

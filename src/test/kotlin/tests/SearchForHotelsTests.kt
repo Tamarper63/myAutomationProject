@@ -2,12 +2,9 @@ package tests
 
 import org.example.Driver.driver
 import org.example.blocks.LandingPageBlock
-import org.junit.After
 import org.openqa.selenium.By
-import org.openqa.selenium.Keys
 import org.openqa.selenium.WebElement
 import tests.SearchForHotelsTestsConst.URL
-import java.lang.Thread.sleep
 import kotlin.test.Test
 
 object SearchForHotelsTestsConst {
@@ -24,12 +21,8 @@ class SearchForHotelsTests() {
         driver.manage().deleteAllCookies()
         landingBlock.verifyLandingPage(6000, 5,60000)
         landingBlock.clickOnWhere()
-//        landingBlock.inputTextInLocationField("amsterdam")
-        val inputField = driver.findElement(By.id("bigsearch-query-location-input"))
-        inputField.sendKeys("amsterdam")
-        inputField.sendKeys(Keys.ENTER)
-        val element: WebElement = driver.findElement(By.cssSelector("[data-testid='calendar-day-04/18/2024']"))
-        element.click()
+        landingBlock.inputTextInLocationField("amsterdam")
+        landingBlock.clickOnDateStart()
         val element2: WebElement = driver.findElement(By.cssSelector("[data-testid='calendar-day-04/22/2024']"))
         element2.click()
         val element4: WebElement = driver.findElement(By.cssSelector("#search-tabpanel > div > div.c111bvlt.atm_9s_1txwivl.atm_1eltean_1osqo2v.c1gh7ier.atm_am_1qhqiko.dir.dir-ltr"))

@@ -17,9 +17,12 @@ class LandingPage {
         get() = driver.findElement(By.xpath(TITLE_LANDING_PAGE_TITLE_XPATH))
 
     val locationFieldInput: WebElement
-        get() = driver.findElement(By.id(LOCATION_FIELD_ID))
+        get() = driver.findElement(By.id("bigsearch-query-location-input"))
+
+    val dateStart: WebElement
+        get() = driver.findElement(By.cssSelector("[data-testid='calendar-day-04/18/2024']"))
+
 }
 
-//        val inputField = driver.findElement(By.id("bigsearch-query-location-input"))
-//        inputField.sendKeys("amsterdam")
-//        inputField.sendKeys(Keys.ENTER)
+
+
