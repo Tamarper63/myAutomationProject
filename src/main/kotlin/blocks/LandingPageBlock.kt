@@ -36,6 +36,14 @@ class LandingPageBlock {
         clickOnElement(landingPage.clickOnSearch)
     }
 
+    fun clickOnMenu() {
+        clickOnElement(landingPage.clickOnMenu)
+    }
+
+    fun clickOnLogIn() {
+        clickOnElement(landingPage.clickOnLogIn)
+    }
+
     fun clickOnAddAdult() {
         clickOnElement(landingPage.addAdult)
     }

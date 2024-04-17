@@ -34,6 +34,11 @@ class LandingPage {
     val clickOnSearch: WebElement
         get() = driver.findElement(By.cssSelector("button[data-testid='structured-search-input-search-button']"))
 
+    val clickOnMenu: WebElement
+        get() = driver.findElement(By.xpath("//button[@data-testid='cypress-headernav-profile']"))
+    val clickOnLogIn: WebElement
+    get() = driver.findElement(By.xpath("(//button[@data-testid='cypress-headernav-profile'])[2]"))
+
 }
 
 
